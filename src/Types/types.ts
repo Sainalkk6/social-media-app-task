@@ -107,6 +107,7 @@ export type BlogCardtype = {
 
 export type UserDetailType = {
     clickedUser: UserType
+    setToggleUserInfo:React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export type CommentModaltype = {

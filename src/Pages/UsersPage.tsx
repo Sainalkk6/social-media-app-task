@@ -44,8 +44,8 @@ const UsersPage = () => {
       </div>
       {toggleEdit && <EditUserForm initialValues={initialValues} setToggleEdit={setToggleEdit}/>}
       {data?.data.map((user:UserType)=><UserCard key={user.id} setClickedUser={setClickedUser} setCurrentUser = {setCurrentUser} setToggleUserInfo = {setToggleUserInfo} handleToggleEdit={handleToggleEdit} handleDeleteUser={handleDeleteUser} user={user}/>)}
-      <div className="flex items-center justify-center absolute">
-        {toggleUserInfo && <UserDetails clickedUser={clickedUser}/>}  
+      <div className="flex items-center justify-center absolute right-0 left-0 top-10" >
+        {toggleUserInfo && <UserDetails setToggleUserInfo={setToggleUserInfo} clickedUser={clickedUser}/>}  
       </div>
     </div>
   );
